@@ -1,0 +1,600 @@
+/* =========================================
+   TASKFLOW - TASK 3
+   Advanced CSS + Responsive Design
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #1f2937;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.custom-navbar {
+    background: #111827;
+    padding: 16px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    margin-left: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero-section {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+    background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.15), transparent 35%), linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+.hero-badge {
+    background: #e0e7ff;
+    color: #4338ca;
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin: 15px 0 25px;
+    animation: slideUp 0.8s ease;
+}
+
+.hero-title span {
+    color: #4f46e5;
+}
+
+.hero-text {
+    max-width: 580px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #64748b;
+    margin-bottom: 30px;
+    animation: slideUp 1s ease;
+}
+
+.hero-button {
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================================
+   HERO CARD
+   ========================================= */
+
+.hero-card {
+    background: white;
+    border-radius: 24px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+    animation: floatCard 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+}
+
+.hero-card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.hero-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FEATURES
+   ========================================= */
+
+.features-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading span,
+.section-label {
+    color: #4f46e5;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    margin-top: 12px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.feature-card {
+    height: 100%;
+    padding: 35px;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: white;
+    transition: all 0.35s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #c7d2fe;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.09);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   CREATE TASK
+   ========================================= */
+
+.create-section {
+    padding: 100px 0;
+    background: #f7f8fc;
+}
+
+.form-card {
+    background: white;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+    animation: fadeIn 0.8s ease;
+}
+
+.form-header {
+    margin-bottom: 35px;
+}
+
+.form-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 8px 0;
+    letter-spacing: -1px;
+}
+
+.form-header p {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.form-control,
+.form-select {
+    min-height: 50px;
+    border: 1px solid #dbe0e8;
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.25s ease;
+}
+
+textarea.form-control {
+    min-height: 120px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+    transform: translateY(-1px);
+}
+
+.form-control::placeholder {
+    color: #a1a8b3;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+   ========================================= */
+
+.submit-button {
+    width: 100%;
+    min-height: 52px;
+    border: none;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #4338ca;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    padding: 30px 0;
+    background: #111827;
+    color: #9ca3af;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes floatCard {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 70px 0;
+    }
+    .hero-title {
+        letter-spacing: -2px;
+    }
+    .hero-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .nav-link {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .features-section,
+    .create-section {
+        padding: 70px 0;
+    }
+    .form-card {
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+    .form-header h2 {
+        font-size: 2rem;
+    }
+    .feature-card {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-text {
+        font-size: 1rem;
+    }
+    .hero-card {
+        padding: 30px 20px;
+    }
+}
+
+
+/* =========================================
+   SUCCESS PAGE
+   ========================================= */
+
+.success-section {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    background: radial-gradient( circle at 50% 0%, rgba(99, 102, 241, 0.12), transparent 40%), #f7f8fc;
+}
+
+.success-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 55px;
+    background: white;
+    border-radius: 26px;
+    text-align: center;
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.1);
+    animation: successAppear 0.7s ease;
+}
+
+.success-icon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e0e7ff;
+    color: #4f46e5;
+    font-size: 2.8rem;
+    font-weight: bold;
+    animation: successPop 0.6s ease;
+}
+
+.success-card h1 {
+    margin: 10px 0 12px;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.success-message {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+
+/* Task Details */
+
+.task-details {
+    text-align: left;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #fafbff;
+}
+
+.task-details h2 {
+    margin-bottom: 12px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.task-description {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* Information Cards */
+
+.task-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.info-card {
+    padding: 18px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+.info-card span {
+    display: block;
+    margin-bottom: 6px;
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.info-card strong {
+    color: #1f2937;
+}
+
+
+/* Success Actions */
+
+.success-actions {
+    margin-top: 30px;
+}
+
+.success-actions .submit-button {
+    width: auto;
+    padding: 13px 28px;
+    display: inline-block;
+}
+
+.secondary-button {
+    display: inline-block;
+    margin-left: 15px;
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    color: #3730a3;
+    transform: translateX(-3px);
+}
+
+
+/* Success Animations */
+
+@keyframes successAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes successPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Success Page Responsive */
+
+@media (max-width: 767px) {
+    .success-section {
+        padding: 50px 0;
+    }
+    .success-card {
+        padding: 35px 22px;
+    }
+    .task-details {
+        padding: 22px;
+    }
+    .task-info {
+        grid-template-columns: 1fr;
+    }
+    .success-actions .submit-button {
+        width: 100%;
+    }
+    .secondary-button {
+        margin: 18px 0 0;
+    }
+}
