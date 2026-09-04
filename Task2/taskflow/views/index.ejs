@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <div class="header">
+            <h1>TaskFlow</h1>
+            <p>Create and manage your tasks</p>
+        </div>
+
+        <section class="task-form">
+
+            <h2>Create a Task</h2>
+
+            <form action="/tasks" method="POST" onsubmit="return validateForm()">
+
+                <!-- Task Title -->
+                <div class="form-group">
+                    <label for="title">Task Title</label>
+
+                    <input type="text" id="title" name="title" placeholder="Enter task title">
+                </div>
+
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="description">Description</label>
+
+                    <textarea id="description" name="description" placeholder="Describe your task"></textarea>
+                </div>
+
+
+                <!-- Priority -->
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+
+                    <select id="priority" name="priority">
+
+                        <option value="">
+                            Select priority
+                        </option>
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                        <option value="Medium">
+                            Medium
+                        </option>
+
+                        <option value="High">
+                            High
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- Category -->
+                <div class="form-group">
+                    <label for="category">Category</label>
+
+                    <select id="category" name="category">
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="Work">
+                            Work
+                        </option>
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- Due Date -->
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+
+                    <input type="date" id="dueDate" name="dueDate">
+                </div>
+
+
+                <button type="submit">
+                    Create Task
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+    <script>
+        function validateForm() {
+
+            let isValid = true;
+
+            // Get form values
+            const title = document.getElementById("title").value.trim();
+            const description = document.getElementById("description").value.trim();
+            const priority = document.getElementById("priority").value;
+            const category = document.getElementById("category").value;
+            const dueDate = document.getElementById("dueDate").value;
+
+
+            // Validate Task Title
+            if (title.length < 3) {
+                alert("Task title must contain at least 3 characters.");
+                isValid = false;
+            }
+
+
+            // Validate Description
+            else if (description.length < 10) {
+                alert("Description must contain at least 10 characters.");
+                isValid = false;
+            }
+
+
+            // Validate Priority
+            else if (priority === "") {
+                alert("Please select a priority.");
+                isValid = false;
+            }
+
+
+            // Validate Category
+            else if (category === "") {
+                alert("Please select a category.");
+                isValid = false;
+            }
+
+
+            // Validate Due Date
+            else if (dueDate === "") {
+                alert("Please select a due date.");
+                isValid = false;
+            }
+
+
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>

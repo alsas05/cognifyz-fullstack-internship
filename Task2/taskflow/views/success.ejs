@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Created | TaskFlow</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <div class="header">
+            <div class="success-icon">✓</div>
+
+            <h1>Task Created!</h1>
+
+            <p>Your task has been submitted successfully.</p>
+        </div>
+
+        <section class="task-details">
+
+            <h2>
+                <%= title %>
+            </h2>
+
+            <p class="description">
+                <%= description %>
+            </p>
+
+            <div class="task-info">
+
+                <div class="info-card">
+                    <span>Priority</span>
+                    <strong><%= priority %></strong>
+                </div>
+
+                <div class="info-card">
+                    <span>Category</span>
+                    <strong><%= category %></strong>
+                </div>
+
+                <div class="info-card">
+                    <span>Due Date</span>
+                    <strong><%= dueDate %></strong>
+                </div>
+
+            </div>
+
+            <a class="back-link" href="/">
+                ← Create another task
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
